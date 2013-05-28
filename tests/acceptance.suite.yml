@@ -15,4 +15,4 @@ modules:
         - WebHelper
     config:
         PhpBrowser:
-            url: 'http://192.168.0.32:8888/drapewell/'
+            url: 'http://192.168.0.38:8888/auto-cms/'

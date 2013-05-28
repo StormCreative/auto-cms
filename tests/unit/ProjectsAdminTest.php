@@ -16,7 +16,7 @@ class projectsAdminTest extends \Codeception\TestCase\Test
     /**
      * @var some mock data
      */
-    private $_data = array ( "projects" => array ( "title" => "Unit Test Data", "content" => "Unit Test Data""image" => "Unit Test Data" ) );
+    private $_data = array ( "projects" => array ( "title" => "Unit Test Data", "content" => "Unit Test Data", "type" => "Unit Test Data", "tag" => "Unit Test Data" ) );
 
     protected function _before()
     {
@@ -36,6 +36,14 @@ class projectsAdminTest extends \Codeception\TestCase\Test
            }
            public function testSaveWithoutContent() {
                 unset ( $this->_data[ "projects" ][ "content" ] );
+                $this->assertFalse( $this->_model->save ( $this->_data[ "projects" ] ) );
+           }
+           public function testSaveWithoutType() {
+                unset ( $this->_data[ "projects" ][ "type" ] );
+                $this->assertFalse( $this->_model->save ( $this->_data[ "projects" ] ) );
+           }
+           public function testSaveWithoutTag() {
+                unset ( $this->_data[ "projects" ][ "tag" ] );
                 $this->assertFalse( $this->_model->save ( $this->_data[ "projects" ] ) );
            }
            

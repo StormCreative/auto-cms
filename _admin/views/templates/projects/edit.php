@@ -16,7 +16,7 @@
             </ol>
         </div>
     <?php endforeach; ?>
-<?php endif; ?>
+<?php endif; ?><p><label>type</label>book: <input type="radio" <?php echo ( $type == "book" ? 'checked="checked"' : "" ); ?> name="projects[type]" value="book" />film: <input type="radio" <?php echo ( $type == "film" ? 'checked="checked"' : "" ); ?> name="projects[type]" value="film" />music: <input type="radio" <?php echo ( $type == "music" ? 'checked="checked"' : "" ); ?> name="projects[type]" value="music" /></p><p><label>tag</label>design: <input type="checkbox" name="projects[tag][]" value="design" />development: <input type="checkbox" name="projects[tag][]" value="development" /></p>
 			<p><input type="submit" name="submit" value="Save" /></p>
 		</form>
 	</article>

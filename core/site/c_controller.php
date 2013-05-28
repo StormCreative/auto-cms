@@ -62,33 +62,7 @@ class C_Controller
                 //header( "Location: " . DIRECTORY . "error/access" );
 
             $this->stylesheet_path = '_admin/';
-        } else {
-            //$this->addTag( 'dynamic_services', Menu::get_dynamic() );
         }
-
-        if (!!$_SESSION['cart_id']) {
-
-            $basket = new Basket_model();
-
-            $basket->where( DB_SUFFIX.'_basket.cart_id = :cart_id' );
-
-            $data = $basket->all( array( 'cart_id' => $_SESSION['cart_id'] ) );
-
-
-            $total = $basket->calculate_total();
-
-            $cart_size = $basket->number_of_items();
-
-
-            // Set session for checkout
-            $_SESSION['cart']['size'] = $cart_size;
-
-            $this->addTag( 'cart_total', $total );
-            $this->addTag( 'cart_size', $cart_size );
-            $this->addTag( 'basket', $data );
-
-        }
-
 
         $this->setScript ( 'main' );
         

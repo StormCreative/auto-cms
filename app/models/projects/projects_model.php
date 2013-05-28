@@ -13,7 +13,7 @@ class projects_model extends activerecord
 		$this->has_one = "";
         $this->has_many = array();
 
-		$this->validates = array(array( "not_empty", "title" ),array( "not_empty", "content" ),);
+		$this->validates = array(array( "not_empty", "title" ),array( "not_empty", "content" ),array( "not_empty", "type" ),array( "not_empty", "tag" ));
 	}
 }
 

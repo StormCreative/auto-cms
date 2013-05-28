@@ -22,10 +22,10 @@ class projects extends application_controller
 		if ( post_set() )
 		{
 			//Handle the image
-	        if ( !!$_POST["multi-image"] || !!$_FILES )
-	            $_POST[ "projects" ][ "gallery" ] = implode( ",", Image_helper::save_many( $_POST[ "multi-image" ] ) );
-	        else
-	            $_POST[ "projects" ][ "gallery" ] = NULL;
+					        if ( !!$_POST["multi-image"] || !!$_FILES )
+					            $_POST[ "projects" ][ "gallery" ] = implode( ",", Image_helper::save_many( $_POST[ "multi-image" ] ) );
+					        else
+					            $_POST[ "projects" ][ "gallery" ] = NULL;
 			
 
 			if ( !$this->_projects->save( $_POST[ 'projects' ] ) ) {

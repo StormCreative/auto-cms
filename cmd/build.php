@@ -198,23 +198,26 @@ class Build extends Base_admin
 
         //Loop round the fields array and find the matching template for each field type
         foreach ( $fields as $key => $value ) {
-            $tmpl = get ( PATH . "cmd/templates/form/" . $value . ".txt" );
+
+        	//Get the options
+            $options = explode( ':', $value );
+            $tmpl = get ( PATH . "cmd/templates/form/" . $options[0] . ".txt" );
 
             //Replace the {{NAME}} with the name of the field
             $tmpl = str_replace( "{{NAME}}", $key, $tmpl );
             //Replace the {{CONTROLLER}} with the name of the controller
             $tmpl = str_replace( "{{CONTROLLER}}", $name, $tmpl );
 
-            /**
-            if (!!$field[ 'options' ]) {
-                switch ($field[ 'type' ]) {
+            if ( $options[0] == 'radio' || $options[0] == 'checkbox' ) {
+
+                switch ( $options[0] ) {
                     case 'checkbox':
                         //Organise the checkbox options into checkboxes
                         //Need to make sure the checked attribute is added if the item present
                         $boxes = '';
 
-                        foreach ( explode ( ",", $field[ 'options' ] ) as $item ) {
-                            $boxes .= $item . ': <input type="checkbox" name="' . $this->_controller_name . '[' . $field[ 'name' ] . '][]" value="' . $item . '" />';
+                        foreach ( explode ( ",", $options[1] ) as $item ) {
+                            $boxes .= $item . ': <input type="checkbox" name="' . $name . '[' . $key . '][]" value="' . $item . '" />';
                         }
 
                         $tmpl = str_replace ( "{{BOXES}}", $boxes, $tmpl );
@@ -226,8 +229,8 @@ class Build extends Base_admin
                         //Also need to do the selected thingy
                         $radios = '';
 
-                        foreach ( explode ( ",", $field[ 'options' ] ) as $item ) {
-                            $radios .= $item . ': <input type="radio" <?php echo ( $' . $field[ 'name' ] . ' == "' . $item . '" ? \'checked="checked"\' : "" ); ?> name="' . $this->_controller_name . '[' . $field[ 'name' ] . ']" value="' . $item . '" />';
+                        foreach ( explode ( ",", $options[1] ) as $item ) {
+                            $radios .= $item . ': <input type="radio" <?php echo ( $' . $key . ' == "' . $item . '" ? \'checked="checked"\' : "" ); ?> name="' . $name . '[' . $key . ']" value="' . $item . '" />';
                         }
 
                         $tmpl = str_replace ( "{{RADIOS}}", $radios, $tmpl );
@@ -235,7 +238,6 @@ class Build extends Base_admin
                     break;
                 }
             }
-            **/
 
             $fields_tmpl .= $tmpl;
         }
@@ -271,7 +273,7 @@ class Build extends Base_admin
 
         $i = 0;
         foreach ( $fields as $key => $value ) {
-            if ($field[ 'name' ] != 'image') {
+            if ( $key != 'image' ) {
                 $count = !!$fields->image ? count ( (array) $fields ) - 1 : count ( (array) $fields );
                 //Build the mock data array
                 $mock_data_array_string .= '"' . $key . '" => "Unit Test Data"' . ( $count - 1 > $i ? ', ' : '' );
