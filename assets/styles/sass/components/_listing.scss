@@ -1,0 +1,75 @@
+.centre_blurb {
+	background: white;
+	margin: 0;
+	padding: 1em 0;
+	text-align: center;
+}
+
+.centre_blurb p {
+	color: #B3B3B3;
+	width: 570px;
+	margin: 0 auto;
+}
+
+.centre_blurb .title {
+	margin: 5px auto 10px auto;
+}
+
+.centre_blurb .sub_title {
+	color: #B19975;
+	margin: 0px auto 8px auto;
+}
+
+.find_out_more {
+	margin: 0 auto;
+	width: 700px;
+	text-align: center;
+}
+
+.find_out_more a {
+	color: #B19975;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.margin-top {
+	margin-top: 1.4em;
+}
+
+.media {
+	border-top: 1px solid #BDBDBD;
+	margin: 10px auto 10px auto;
+	padding: 20px 0 10px 0;
+	overflow: hidden;
+	width: 83.333333333%;
+}
+
+.media:first-child {
+	border: none;
+	margin: 0px auto 10px auto;
+	padding: 10px 0 10px 0;
+}
+
+.media img {
+	border-top: 4px solid #9C295C;
+}
+.media .left {
+	float: left;
+	margin: 5px 23px 0 0;
+}
+
+.media .right {
+	float: right;
+	margin: 5px 0px 0 10px;
+}
+
+.media h2 {
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.media .body {
+	overflow: hidden;
+}

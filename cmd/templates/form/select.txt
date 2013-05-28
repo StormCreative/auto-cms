@@ -1,0 +1,7 @@
+<p><label>{{NAME}}</label>
+	<span class="select_buttons" name="{{CONTROLLER}}[{{NAME}}]">
+	    <select>
+	    	{{OPTIONS}}
+	    </select>
+	</span>
+</p>

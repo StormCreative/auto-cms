@@ -1,0 +1,1 @@
+<p><label>{{NAME}}</label><input type="date" class="date_picker" name="{{CONTROLLER}}[{{NAME}}]" placeholder="DD/MM/YYYY"></p>

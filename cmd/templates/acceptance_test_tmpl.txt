@@ -1,0 +1,15 @@
+<?php
+
+$I = new WebGuy($scenario);
+$I->wantTo('Test the {{CONTROLLER}} edit page');
+$I->amOnPage('admin/{{CONTROLLER}}/edit');
+
+/** First check form cannot be sent if the user doesnt input any values **/
+$I->amGoingTo('Submit user form with invalid values');
+$I->click('Save');
+
+{{ALL_NULL_CHECK}}
+
+{{SINGLE_FIELD_TESTS}}
+
+?>

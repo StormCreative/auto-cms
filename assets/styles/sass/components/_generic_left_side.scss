@@ -1,0 +1,38 @@
+.left_testimonial {
+	border-bottom: 4px solid #9C295C;
+	float: right;
+	margin-top: 60px;
+	margin-right: 1em;
+	width: 71%;
+}
+
+.quote {
+	font-size: 1em;
+	margin: 0 0 8px 0;
+	line-height: 22px;
+}
+
+.quote:before {
+	background: url(../images/quote.png) no-repeat;
+	content: "";
+	float: left;
+	height: 19px;
+	margin: 0 5px 0 0;
+	padding: 0;
+	width: 23px;
+}
+
+.name {
+	font-family: 'RokkittRegular';
+	font-size: 1em;
+	margin: 20px 0 0 0;
+	text-transform:uppercase;
+}
+
+.job_title {
+	color: #B19975;
+	font-family: 'RokkittRegular';
+	font-size: 14px;
+	font-style: italic;
+	margin: 0px 0 7px 0;
+}

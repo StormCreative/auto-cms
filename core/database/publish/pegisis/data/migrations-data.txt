@@ -1,0 +1,1 @@
+INSERT INTO `migrations` ( id, name, create_date) VALUES ('5', 'pegisis_authors', '2013-03-11 10:28:01')

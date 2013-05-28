@@ -1,0 +1,1 @@
+{{NAME}} <textarea class="js-wysiwyg" name="{{CONTROLLER}}[{{NAME}}]"><?php echo ${{NAME}}; ?></textarea>

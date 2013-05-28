@@ -1,0 +1,215 @@
+/* Button.css
+ **********************************************************************/
+
+
+/* 1. Button
+ **********************************************************************/
+
+.btn {
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(234,234,234,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(234,234,234,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* W3C */
+	border:1px solid rgba(0, 0, 0, 0.15);
+	font-size:12px;
+	font-weight:bold;
+	color:#333;
+	cursor:pointer;
+	line-height:1.5;
+	display:inline-block;
+	padding:7px 14px;
+	text-align:center;
+	text-shadow:0 -1px 0 rgba(255, 255, 255, 0.4);
+	
+	-webkit-border-radius:0.25em;
+	-moz-border-radius:0.25em;
+	border-radius:0.25em;
+	-webkit-box-shadow:inset 1px -1px 0 rgba(255, 255, 255, 0.5);
+	-moz-box-shadow:inset 1px -1px 0 rgba(255, 255, 255, 0.5);
+	box-shadow:inset 1px -1px 0 rgba(255, 255, 255, 0.5);
+	
+	-webkit-transition:box-shadow 0.2s ease;
+	-moz-transition:box-shadow 0.2s ease;
+	-ms-transition:box-shadow 0.2s ease;
+	-o-transition:box-shadow 0.2s ease;
+	-webkit-transition:box-shadow 0.2s ease;
+}
+
+.no-cssgradients .btn {
+	background:url(../Images/Css/bg-btn-ie.png) left bottom repeat-x #fff;
+}
+
+.no-rgba .btn {
+	border:1px solid #C7C7C7;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.selected,
+input[type=checkbox]:checked + .btn {
+	text-decoration:none;	
+	
+	-webkit-box-shadow:inset 0 0 50px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:inset 0 0 50px rgba(0, 0, 0, 0.1);
+	box-shadow:inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.no-boxshadow .btn:hover,
+.no-boxshadow .btn:focus,
+.no-boxshadow .btn.selected {
+	background:url(../Images/Css/bg-btn-hover-ie.png) left bottom repeat-x;
+}
+
+.btn:active {
+	-webkit-box-shadow:inset 0 0 50px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:inset 0 0 50px rgba(0, 0, 0, 0.3);
+	box-shadow:inset 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.m-btn {
+	border-left:0;
+	
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border-radius:0;
+}
+
+.f-btn {
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.e-btn {
+	border-left:0;
+	
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-radius-topleft: 0;
+	-moz-border-radius-bottomleft: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.btns {
+	padding: 0;
+	margin-bottom:1.5em;	
+}
+
+.btns li + li {
+	margin-left:-3px;	
+}
+
+.btn:disabled,
+.btn:disabled:hover,
+.btn:disabled:focus,
+.btn:disabled:active {
+	color:#aaa;
+	cursor:default;
+	opacity:0.7;
+	
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+
+.btn-dis {
+	float:right;
+	margin:2em 0 0;	
+}
+
+.err-btn {
+	background: rgb(255,48,25); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,48,25,1) 0%, rgba(207,4,4,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,48,25,1)), color-stop(100%,rgba(207,4,4,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%); /* W3C */
+	border-left:1px solid rgba(0, 0, 0, 0.3);
+	color:#fff;
+	text-shadow:0 -1px 0 rgba(0 , 0, 0, 0.4);
+	
+	-webkit-box-shadow:inset 1px -1px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:inset 1px -1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow:inset 1px -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.no-cssgradients .err-btn {
+	background:#f00;
+}
+
+
+/* 2. Button-submit
+ **********************************************************************/
+
+.btn-submit {
+	font-weight:bold;
+	padding:8px 20px;
+	position:relative;
+	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.3);
+	
+	-webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.4);
+	-moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.4);
+	box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.4);
+	-webkit-border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	border-radius:0.2em;
+}
+
+.btn-submit:before {
+	content:'';
+	border:5px solid rgba(0, 0, 0, 0.1);
+	display:block;
+	height:100%;
+	position:absolute;
+	left:-5px;
+	top:-5px;
+	width:100%;
+	
+	-webkit-border-radius:0.3em;
+	-moz-border-radius:0.3em;
+	border-radius:0.3em;
+}
+
+.btn-submit:active {
+	top:1px;
+	
+	-webkit-box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.2);	
+	-moz-box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.2);	
+	box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.2);	
+}
+
+.btn:active:before {
+	border:5px solid rgba(0, 0, 0, 0.15);
+}
+
+/* 3. Back Button
+ **********************************************************************/
+
+.btn-back {
+	float:left;
+	margin:-2px 1em 0 -2px;
+}
+
+/*********** UPLOAD BUTTONS *******************/
+
+.documents-upload {
+	background: url(../images/upload_documents.png)no-repeat;
+	height: 24px;
+	margin: 10px 0;
+	width: 103px;
+}
+
+.images_upload {
+	background: url(../images/upload_images.png)no-repeat;
+	height: 24px;
+	margin: 10px 0;
+	width: 103px;
+}

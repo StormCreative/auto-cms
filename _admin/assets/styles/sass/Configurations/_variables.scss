@@ -1,0 +1,14 @@
+// Colours
+$brand-color: #AAA;  // General brand colour
+$brand-color-light: lighten($brand-color, 20%); // 20% lighter colour
+$brand-color-dark: darken($brand-color, 5%); // 5% darker colour
+$brand-color-darker: darken($brand-color, 20%); // 20% darker colour
+$brand-color-darkest: darken($brand-color, 35%); // 20% darker colour
+
+//Fonts & sizes
+$base-font: sans-serif;
+$base-font-size: 16px;
+$base-font-size-nounit: 16;
+
+// Site dimensions
+$wrapper-max-width: 60em; // 960px / 16px

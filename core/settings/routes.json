@@ -1,0 +1,17 @@
+[{	
+	"test_only" : "test/only",
+	"test/again" : "testing",
+	"testing" : "home/test",
+	"nigel": "home/test",
+	"services/upholstery" : "services/generic/upholstry",
+	"services/tracks-poles" : "generic/listing/tracks-poles",
+	"services/blinds" : "generic/listing/blinds-that-suit-you",
+	"services/trimmings" : "services/generic/trimmings",
+	"services/curtains-voiles" : "generic/listing/curtians-voiles",
+	"services/lining-sundries" : "services/generic/lining-sundries",
+	"services/furnishings" : "services/generic/furnishings",
+	"design-service" : "services/generic/design-service",
+	"about" : "services/generic/about",
+	"corporate-contracts" : "corporate_contracts",
+	"terms-and-conditions" : "terms_conditions"
+}]

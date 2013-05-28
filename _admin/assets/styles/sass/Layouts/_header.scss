@@ -1,0 +1,118 @@
+.settings {
+	background: #f0f0f0; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f0f0f0 0%, #e9e9e9 98%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(98%,#e9e9e9), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f0f0f0 0%,#e9e9e9 98%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f0f0f0 0%,#e9e9e9 98%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f0f0f0 0%,#e9e9e9 98%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f0f0f0 0%,#e9e9e9 98%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+
+    box-shadow: 0 2px 4px #C7C7C7;
+    -moz-box-shadow: 0 2px 4px #C7C7C7;
+    -webkit-box-shadow: 0 2px 4px #C7C7C7;
+
+    .settings__holder {
+    	font-size: 1.75em;
+    	list-style: none;
+    	margin: 0 auto;
+    	max-width: 960px;
+    	padding: 19px;
+
+    	li {
+    		display: inline-block;
+    		vertical-align: middle;
+
+    		img {
+	    		max-width: 60%;
+	    		vertical-align: middle;
+	    	}
+    	}
+
+    	.settings__holder--button {
+    		float: right;
+    	}
+    }
+
+    .js-settings-menu {
+		display: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		right: -40px;
+
+		ul {
+			font-size: 16px;
+			line-height: normal;
+			margin: 1em 0px 0 0;
+			padding: 0;
+			
+			text-align: right;
+
+			li {
+				border-left: 1px solid $brand-color;
+				display: inline-block;
+				line-height: 20px;
+				padding: 0 10px;
+				position: relative;
+
+				&:before {
+					background: $brand-color-dark;
+					content: '';
+					height: 20px;
+					left: 0;
+					position: absolute;
+					top: 0;
+					width: 1px;
+				}
+
+				&:first-child {
+					border-left: none;
+
+					&:before {
+						background: none;
+					}
+				}
+
+				i {
+					margin-right: 8px;
+				}
+
+				a {
+					color: #3f3f3f;
+
+					&:hover,
+					&:focus {
+						color: $brand-color-dark;
+					}
+				}
+			}
+		}
+	}
+}
+
+.js-settings-button {
+	background: $brand-color-dark;
+	color: white;
+	display: inline-block;
+	font-size: 19px;
+	margin: 4px 0;
+	padding: 6px 5px 6px 5px;
+	text-align: center;
+
+	border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+
+    transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+    	background: #b2cf55;
+    }
+}

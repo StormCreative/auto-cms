@@ -1,0 +1,144 @@
+// Configurations/Settings
+@import "configurations/variables";
+//fonts
+@import "fonts/fonts";
+@import "fonts/font-awesome";
+//layouts
+@import "layouts/body";
+@import "layouts/container";
+@import "layouts/header";
+
+@import "components/delete-popup";
+
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    font-size: $base-font-size;
+    margin: 0;
+    padding: 0;
+} 
+
+/* 
+<div class="wrapper"></div> 
+*/
+
+.wrapper {
+    background: white;
+    margin: 0 auto 0 auto;
+    max-width: $wrapper-max-width;
+    overflow: hidden;
+    width: 100%;
+    /* css3 */
+    -webkit-box-shadow: 0 0 13px #999999; 
+    -moz-box-shadow: 0 0 13px #999999; 
+    box-shadow: 0 0 13px #999999;
+}
+
+/* 
+<aside class="sub__content"></aside> 
+*/
+
+.sub__content {
+    background: white;
+    float: left;
+    margin: 10px 0 0 0;
+    padding: 0 0 10px 0;
+    width: 23%;
+    /* Css3 */
+    border-radius:0.4em;
+    -moz-border-radius: 0.4em;
+    -webkit-border-radius: 0.4em;
+}
+
+/* 
+<section class="main__content"></section> 
+*/
+
+.main__content {
+    float: right;
+    margin: calc-ems(8) calc-ems(30) calc-ems(50) 0;
+    padding: 10px 0;
+    width: 75%;
+}
+
+a {
+    text-decoration: none;
+    
+    transition: color 0.2s ease 0s;
+    -moz-transition: color 0.2s ease 0s;
+    -webkit-transition: color 0.2s ease 0s;
+}
+
+a:hover,
+a:focus {
+    transition: color 0.2s ease 0s;
+    -moz-transition: color 0.2s ease 0s;
+    -webkit-transition: color 0.2s ease 0s;
+}
+
+h1 {
+    background: $brand-color;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: font-sizing(17);
+    font-weight: normal;
+    margin: 0 0;
+    padding: calc-ems(10) calc-ems(15);
+    text-transform: uppercase;
+}
+
+// The reason important was added is because the text is generated via the CMS and in the design the first paragraph needs this styling.
+// :first-child did not work so first-of-type was implemented which worked apart from one browser. Yes you got it ie8!
+// As it needs to work for all browsers this method was used and unfortunately important had to be used to overwrite styles in the other spreadsheets targeting p tags
+h1 + p {
+    color: #231F20 !important;
+    font-size: 14px !important;
+}
+
+h2 {
+    background: $brand-color;
+    color: #FFF;
+    font-size: font-sizing(15);
+    font-weight: bold;
+    margin: 0 0 calc-ems(8);
+    padding: calc-ems(8) calc-ems(10);
+}
+
+.holder {
+    background: white;
+    border: 1px solid #E0E5E9;
+    margin: 0 0 1em 0;
+    padding: 10px;
+    overflow: hidden;
+    width: 100%;
+    /* CSS3 */
+    border-radius:  0 0 0.4em 0.4em;
+    -moz-border-radius: 0 0 0.4em 0.4em;
+    -webkit-border-radius: 0 0 0.4em 0.4em;
+}
+
+/* Media Queries */
+@media screen and (max-width: 650px) {
+     aside, section {
+        float: none;
+        clear: left;
+        margin: 0 0 10px; 
+        width: 100% !important;
+        }
+
+        aside {
+            max-width: 608px !important;
+            width: 95% !important;
+        }
+
+        nav ul {
+            display:none !important;
+        }
+        nav select {
+            display: block !important;
+        }         
+}

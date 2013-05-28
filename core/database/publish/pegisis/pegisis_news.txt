@@ -1,0 +1,1 @@
+CREATE TABLE `pegisis_news` (`id` int(11) PRIMARY auto_increment,`title` varchar(255)  ,`body` text  ,`tags` varchar(255)  ,`author` varchar(255)  ,`image_id` int(11)  ,`approved` int(1)  ,`create_date` timestamp  on update CURRENT_TIMESTAMP)

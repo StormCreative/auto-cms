@@ -1,0 +1,46 @@
+.terms {
+	border-bottom: 1px solid #808080;
+	clear: both;
+	float: right;
+	margin-right: 20px;
+	width: 200px;
+
+	&:first-child {
+		margin-top: -15px;
+	}
+
+	h3 {
+		color: #808080;
+		font-family: 'RokkittRegular';
+		font-size: 1.3125em;
+		font-weight: normal;
+		margin: 15px 0;
+		text-transform: uppercase;
+
+		-webkit-font-smoothing: antialiased;
+	}
+
+	p {
+		color: #808080;
+		font-family: arial;
+		font-size: 14px;
+		line-height: 19px;
+	}
+}
+
+.tcs {
+	color: #B19975;
+	display: block;
+	float: right;
+	font-family: 'Times';
+	font-size: 1.125em;
+	font-style: italic;
+	margin: 20px 20px 0 0;
+	text-decoration: none;
+	width: 200px;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}

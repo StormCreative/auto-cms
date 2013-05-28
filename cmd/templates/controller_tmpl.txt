@@ -1,0 +1,47 @@
+<?php
+
+class {{CONTROLLER}} extends application_controller
+{
+	private $_{{CONTROLLER}};
+
+	public function __Construct ()
+	{
+		parent::__Construct ();
+
+		$this->_{{CONTROLLER}} = new {{CONTROLLER}}_model();
+		
+		$this->forms->setActionTable ( '{{CONTROLLER}}' );
+	}
+
+	public function edit ( $id = "" )
+	{
+		$this->_{{CONTROLLER}}->attributes[ 'id' ] = !!$id ? $id : $_POST['{{CONTROLLER}}']['id'];
+
+		if ( post_set() )
+		{
+			{{USE_IMAGE}}
+			{{USE_UPLOAD}}
+
+			if ( !$this->_{{CONTROLLER}}->save( $_POST[ '{{CONTROLLER}}' ] ) ) {
+				$feedback = organise_feedback ( $this->_{{CONTROLLER}}->errors, TRUE );
+			}
+			else
+				$feedback = organise_feedback ( $this->forms->getSuccessMessage () );
+		}
+
+		$this->_{{CONTROLLER}}->find( $this->_{{CONTROLLER}}->attributes[ 'id' ] );
+
+		// Sets the form values by the properties set through the Find method in active record
+		$this->mergeTags ( $this->_{{CONTROLLER}}->attributes );
+		
+		$this->addTag ( 'image', $this->_{{CONTROLLER}}->image );
+		$this->addTag ( 'feedback', $feedback );
+
+		$this->addStyle ( 'edit' );
+		$this->addStyle ( 'button' );
+
+		$this->setScript( 'main' );
+	}
+}
+
+?>

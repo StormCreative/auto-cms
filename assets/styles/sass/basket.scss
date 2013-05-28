@@ -1,0 +1,50 @@
+@import "layout/structure";
+@import "components/basket_left_side";
+@import "components/bg-headers";
+@import "components/wallpaper";
+@import "components/notification";
+@import "components/basket_table";
+
+.product_link {
+	color: #B3B3B3;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+form {
+	width: 90%;
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+	.grid__layout--one-quarter {
+		width: 30% !important;
+	}
+
+	.grid__layout--three-quarters {
+			float: right !important;
+			width: 65% !important;
+	}
+
+	form {
+	width: 95%;
+	}
+}
+
+@-moz-document url-prefix() { 
+	.basket_table tbody .close {
+		padding-left: 1px;
+		padding-bottom: 21px !important;
+		vertical-align: middle;
+	}
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.basket_table tbody .close {
+		padding-left: 1px;
+		padding-bottom: 21px !important;
+		vertical-align: middle;
+	}
+}

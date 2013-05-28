@@ -1,0 +1,1 @@
+<p><label>{{NAME}}:</label><input type="text" name="{{CONTROLLER}}[{{NAME}}]" class="medium_input" value="<?php echo ${{NAME}}; ?>"></p>

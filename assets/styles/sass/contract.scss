@@ -1,0 +1,39 @@
+@import "layout/structure";
+@import "components/generic_right_side";
+@import "components/generic_left_side";
+@import "components/carousel";
+@import "components/listing";
+@import "components/notification";
+
+.page_title {
+	background: url("../images/page_title_bg.png");
+	border-top: 4px solid #9C295C;
+	position: absolute;
+	width: 31.22923588%;
+	top: 54%;
+	left: 50%;
+	margin-left: -15.61461794%;
+	text-align: center;
+}
+
+.title {
+	color: #B3B3B3;
+	font-family: 'RokkittRegular';
+	font-size: 1.9375em;
+	font-weight: normal;
+	margin: 15px 0 10px 0;
+	padding: 0;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+
+.sub_title {
+	color: #B19975;
+	font-family: times;
+	font-size: 0.9375em;
+	font-style: italic
+}
+
+.find_out_more {
+	text-align: left;
+}

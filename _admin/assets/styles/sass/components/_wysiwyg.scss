@@ -1,0 +1,258 @@
+.wysiwyg__toolbar {
+  font-family: 'Trebuchet MS';
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    width: 100%;
+
+    li {
+      color: #000;
+      cursor: pointer;
+      display: inline-block;
+      height: 25px;
+      line-height: 25px;
+      position: relative;
+      text-align: center;
+      vertical-align: middle;
+      width: 25px;
+    }
+
+    .wysihtml5-command-active,
+    .wysihtml5-command-dialog-opened {
+      background-color: #CCC !important;
+
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+    }
+
+    [data-wysihtml5-command="bold"] {
+      font-weight: bold;
+    }
+
+    [data-wysihtml5-command="italic"] {
+      font-style: italic;
+    }
+
+    [data-wysihtml5-command="insertUnorderedList"] {
+      background: url("../images/wysiwyg-unordered-list-icon.png") center center no-repeat;
+    }
+
+    [data-wysihtml5-command="insertOrderedList"] {
+      background: url("../images/wysiwyg-ordered-list-icon.png") center center no-repeat;
+    }
+
+    [data-wysihtml5-command="createLink"] {
+      background: url("../images/wysiwyg-link-icon.png") center center no-repeat;
+    }
+
+    [data-wysihtml5-command-group="foreColor"] {
+      background: url("../images/wysiwyg-colour-icon.png") center center no-repeat;
+      display: none;
+
+      ul {
+        display: none;
+        margin: 0;
+        position: absolute;
+        top: 100%;
+
+        li {
+          display: block;
+          height: 16px;
+          margin: 2px auto;
+          width: 16px;
+        }
+
+        [data-wysihtml5-command-value="red"] {
+          background: red;
+        }
+
+        [data-wysihtml5-command-value="green"] {
+          background: green;
+        }
+
+        [data-wysihtml5-command-value="blue"] {
+          background: blue;
+        }
+      }
+
+      &:hover > ul,
+      &:focus > ul {
+        display: block;
+      }
+
+    }
+
+    [data-wysihtml5-command ="justifyCenter"] {
+      background: url("../images/wysiwyg-align-center-icon.png") center center no-repeat;
+    }
+
+    [data-wysihtml5-command ="justifyLeft"] {
+      background: url("../images/wysiwyg-align-left-icon.png") center center no-repeat;
+    }
+
+    [data-wysihtml5-command ="justifyRight"] {
+      background: url("../images/wysiwyg-align-right-icon.png") center center no-repeat;
+    }
+  }
+}
+
+// wysiwyg textarea styles
+
+.wysihtml5-sandbox {
+  border: 1px solid #AAA !important;
+  width: 100% !important;
+
+  box-shadow: 2px 2px 4px #AAA !important;
+  -moz-box-shadow: 2px 2px 4px #AAA !important;
+  -webkit-box-shadow: 2px 2px 4px #AAA !important;
+}
+
+.js-wysiwyg {
+  background: #FFF;
+  border: none;
+  font-family: 'Arial';
+  height: 250px;
+  padding: 5px;
+
+  &:focus {
+    background: none;
+    outline: none;
+  }
+}
+
+.wysiwyg-font-size-smaller {
+  font-size: smaller;
+}
+
+.wysiwyg-font-size-larger {
+  font-size: larger;
+}
+
+.wysiwyg-font-size-xx-large {
+  font-size: xx-large;
+}
+
+.wysiwyg-font-size-x-large {
+  font-size: x-large;
+}
+
+.wysiwyg-font-size-large {
+  font-size: large;
+}
+
+.wysiwyg-font-size-medium {
+  font-size: medium;
+}
+
+.wysiwyg-font-size-small {
+  font-size: small;
+}
+
+.wysiwyg-font-size-x-small {
+  font-size: x-small;
+}
+
+.wysiwyg-font-size-xx-small {
+  font-size: xx-small;
+}
+
+.wysiwyg-color-black {
+  color: black;
+}
+
+.wysiwyg-color-silver {
+  color: silver;
+}
+
+.wysiwyg-color-gray {
+  color: gray;
+}
+
+.wysiwyg-color-white {
+  color: white;
+}
+
+.wysiwyg-color-maroon {
+  color: maroon;
+}
+
+.wysiwyg-color-red {
+  color: red;
+}
+
+.wysiwyg-color-purple {
+  color: purple;
+}
+
+.wysiwyg-color-fuchsia {
+  color: fuchsia;
+}
+
+.wysiwyg-color-green {
+  color: green;
+}
+
+.wysiwyg-color-lime {
+  color: lime;
+}
+
+.wysiwyg-color-olive {
+  color: olive;
+}
+
+.wysiwyg-color-yellow {
+  color: yellow;
+}
+
+.wysiwyg-color-navy {
+  color: navy;
+}
+
+.wysiwyg-color-blue {
+  color: blue;
+}
+
+.wysiwyg-color-teal {
+  color: teal;
+}
+
+.wysiwyg-color-aqua {
+  color: aqua;
+}
+
+.wysiwyg-text-align-right {
+  text-align: right;
+}
+
+.wysiwyg-text-align-center {
+  text-align: center;
+}
+
+.wysiwyg-text-align-left {
+  text-align: left;
+}
+
+.wysiwyg-text-align-justify {
+  text-align: justify;
+}
+
+.wysiwyg-float-left {
+  float: left;
+  margin: 0 8px 8px 0;
+}
+
+.wysiwyg-float-right {
+  float: right;
+  margin: 0 0 8px 8px;
+}
+
+.wysiwyg-clear-right {
+  clear: right;
+}
+
+.wysiwyg-clear-left {
+  clear: left;
+}

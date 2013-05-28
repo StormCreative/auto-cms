@@ -1,0 +1,11 @@
+<h1>Home view</h1>
+<p>This needs a login page</p>
+
+<div class="js-login-area">
+	<div class="js-error"></div>
+	<form action="" method="POST" class="js-login-form">
+		<input type="text" placeholder="Username..." class="js-username">
+		<input type="password" placeholder="Password..." class="js-password">
+		<input type="submit" class="js-submit" value="Login">
+	</form>
+</div>

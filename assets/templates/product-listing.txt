@@ -1,0 +1,8 @@
+{{#products}}
+	<li class="products__listing">
+		<a href="{{directory}}products/view/{{id}}"><img class="products__listing--img" src="{{directory}}_admin/assets/uploads/images/182-182/{{image}}" /></a>
+		<p class="product__listing--description">{{{description}}}</p>
+		<p class="product__listing--price"><span>&pound;</span>{{price}}</p>
+		<p class="product__listing--links">{{{buy_button}}}<a href="{{directory}}products/view/{{id}}" class="view_product">View</a></p>
+	</li>
+{{/products}}

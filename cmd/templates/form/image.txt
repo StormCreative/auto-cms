@@ -1,0 +1,8 @@
+<div class="js-upload-container" data-type="image"></div>
+<?php if ( !!$image ) : ?>
+	<div class="js-saved-image">
+		<input type="hidden" name="image" class="js-hidden-name" value="<?php echo $image; ?>" />
+		<img src="<?php echo DIRECTORY; ?>_admin/assets/uploads/images/<?php echo $image; ?>" alt="<?php echo $title; ?>" />
+		<button type="button" class="js-delete-image" data-imagename="<?php echo $image; ?>">Delete</button>
+	</div>
+<?php endif; ?>

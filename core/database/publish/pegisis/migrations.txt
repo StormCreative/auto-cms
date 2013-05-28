@@ -1,0 +1,1 @@
+CREATE TABLE `migrations` (`id` int(11) PRIMARY auto_increment,`name` varchar(255)  ,`create_date` timestamp  on update CURRENT_TIMESTAMP)

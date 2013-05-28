@@ -1,0 +1,28 @@
+<div class="wysiwyg__toolbar" id="wysihtml5-toolbar-{{id}}" style="display: none;">
+	<ul>
+		<li data-wysihtml5-command="bold" title="Bold text">B</li>
+		<li data-wysihtml5-command="italic" title="Italic text">I</li>
+		<li data-wysihtml5-command-group="foreColor">
+			<ul>
+				<li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red"></li>
+				<li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green"></li>
+				<li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="blue"></li>
+			</ul>
+		</li>
+		<li data-wysihtml5-command ="justifyLeft" title="Text-align left"></li>
+		<li data-wysihtml5-command ="justifyCenter" title="Text-align center"></li>
+		<li data-wysihtml5-command ="justifyRight" title="Text-align right"></li>
+		<li data-wysihtml5-command="insertUnorderedList" title="Insert/Remove bulletpoint list"></li>
+		<li data-wysihtml5-command="insertOrderedList" title="Insert/Remove numbered list"></li>
+		<li data-wysihtml5-command="createLink" title="Insert a link"></li>
+		<!--<li data-wysihtml5-command="fontSize" data-wysihtml5-command-value="small">small</li>
+		<li data-wysihtml5-command="fontSize" data-wysihtml5-command-value="large">large</li>-->
+	</ul>
+	<div data-wysihtml5-dialog="createLink" style="display: none;">
+		<label>
+	  		Link:
+	  		<input data-wysihtml5-dialog-field="href" value="http://" class="text">
+		</label>
+		<a data-wysihtml5-dialog-action="save">OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>
+	</div>
+</div>

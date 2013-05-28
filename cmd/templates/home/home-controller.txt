@@ -1,0 +1,13 @@
+<?php
+
+class home extends application_controller
+{
+	public function index ()
+	{
+		$this->setScript ( 'login' );
+		$this->setView ( 'home/index' );
+	}
+}
+
+
+?>

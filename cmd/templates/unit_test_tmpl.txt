@@ -1,0 +1,41 @@
+<?php
+use Codeception\Util\Stub;
+
+class {{CONTROLLER}}AdminTest extends \Codeception\TestCase\Test
+{
+   /**
+    * @var \CodeGuy
+    */
+    protected $codeGuy;
+
+    /**
+     * @var the model object
+     */
+    private $_model;
+
+    /**
+     * @var some mock data
+     */
+    private $_data = {{MOCK_DATA}};
+
+    protected function _before()
+    {
+        $this->_model = new {{CONTROLLER}}_model();
+    }
+
+    protected function _after() {}
+
+    public function testInstantiation ()
+    {
+        $this->assertInstanceOf ( '{{CONTROLLER}}_model', $this->_model );
+    }
+
+    {{TEST_CASES}}
+
+    public function testSaveSuccessful ()
+    {
+        $this->assertTrue ( $this->_model->save ( $this->_data[ '{{CONTROLLER}}' ] ) );
+    }
+}
+
+?>

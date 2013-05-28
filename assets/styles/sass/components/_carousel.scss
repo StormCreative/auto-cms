@@ -1,0 +1,60 @@
+.carousel_holder {
+	overflow: hidden;
+	position: relative;
+
+	.single_img {
+		height: 578px;
+		overflow: hidden;
+		width: 75.25em;
+	}
+
+	.js-carousel {
+		overflow: hidden;
+		width: 75.25em;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			overflow: hidden;
+			padding: 0;
+
+			li {
+				height: 578px;
+				position: relative;
+				width: 75.25em;
+
+				img {
+					height: 578px;
+					width: 75.25em;
+				}
+			}
+		}
+	}
+
+	.js-carousel-pagination {
+		bottom: 0;
+		padding: 0;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		z-index: 5;
+
+		li {
+			background: url("../images/carousel-pagination.png") 0 0 no-repeat;
+			cursor: pointer;
+			display: inline-block;
+			font-size: 0px;
+			height: 8px;
+			margin: 0 8px;
+			vertical-align: middle;
+			width: 8px;
+		}
+
+		.current {
+			background: url("../images/carousel-pagination-active.png") 0 0 no-repeat;
+			height: 16px;
+			margin: 0;
+			width: 16px;
+		}
+	}
+}

@@ -1,0 +1,136 @@
+@import "mixin/retina";
+
+.header__background {
+	display: block;
+	height: 273px;
+	overflow: hidden;
+	position: relative;
+	max-width: 1204px;
+	z-index: 1;
+}
+
+.page_title {
+	background: url("../images/page_title_bg.png");
+	border-top: 4px solid #9C295C;
+	position: absolute;
+	width: 379px;
+	top: 52%;
+	left: 50%;
+	margin-left: -188px;
+	text-align: center;
+}
+
+.title {
+	color: #B3B3B3;
+	font-family: 'RokkittRegular';
+	font-size: 1.9375em;
+	font-weight: normal;
+	margin: 15px 0 10px 0;
+	padding: 0;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+
+.sub_title {
+	color: #B19975;
+	font-family: times;
+	font-size: 0.9375em;
+	font-style: italic
+}
+
+// List of the backgrounds for different subpages
+.trimmings__header {
+	background: url("../images/bg_header-trimmings.jpg") center 0 no-repeat;
+
+	@include retina {
+		background: url("../images/retina/bg_header-trimmings_2x.jpg") center 0 no-repeat;
+		background-size: 100%;
+	}
+}
+
+.design_service__header {
+	background: url("../images/bg_header-design.jpg") center 0 no-repeat;
+
+	@include retina {
+		background: url("../images/retina/bg_header-design_2x.jpg") center 0 no-repeat;
+		background-size: 100%;
+	}
+}
+
+.furnishings__header {
+	background: url("../images/bg_header-furnishings.jpg") center 0 no-repeat;
+
+	@include retina {
+		background: url("../images/retina/bg_header-furnishings_2x.jpg") center 0 no-repeat;
+		background-size: 100%;
+	}
+}
+
+.upholstery__header {
+	background: url("../images/bg_header-upholstery.jpg") center 0 no-repeat;
+
+	@include retina {
+		background: url("../images/retina/bg_header-upholstery_2x.jpg") center 0 no-repeat;
+		background-size: 100%;
+	}
+}
+
+.linings_sundries__header {
+	background: url("../images/bg_header-lining.jpg") center 0 no-repeat;
+
+	@include retina {
+		background: url("../images/retina/bg_header-lining_2x.jpg") center 0 no-repeat;
+		background-size: 100%;
+	}
+}
+
+.about__header {
+	background: url("../images/bg_header-about.jpg") center 0 no-repeat;
+
+	@include retina {
+		background: url("../images/retina/bg_header-about_2x.jpg") center 0 no-repeat;
+		background-size: 100%;
+	}
+}
+
+.wallpaper__header {
+	background: url("../images/bg_header-wallpaper.jpg") center 0 no-repeat;
+
+	@include retina {
+		background: url("../images/retina/bg_header-wallpaper_2x.jpg") center 0 no-repeat;
+		background-size: 100%;
+	}
+}
+
+.fabric__header {
+	background: url("../images/bg_header-fabric.jpg") center 0 no-repeat;
+
+	@include retina {
+		background: url("../images/retina/bg_header-fabric_2x.jpg") center 0 no-repeat;
+		background-size: 100%;
+	}
+}
+
+.basket__header {
+	background: url("../images/bg_header-checkout.jpg") center 0 no-repeat;
+
+	@include retina {
+		background: url("../images/retina/bg_header-checkout_2x.jpg") center 0 no-repeat;
+		background-size: 100%;
+	}
+}
+
+.terms__header {
+	background: url("../images/bg_header-terms.jpg") center 0 no-repeat;
+
+	@include retina {
+		background: url("../images/retina/bg_header-terms_2x.jpg") center 0 no-repeat;
+		background-size: 100%;
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+	.page_title {
+		top: 42%;
+	}
+}

@@ -1,0 +1,71 @@
+h1 {
+	color: #B3B3B3;
+	font-family: 'RokkittRegular';
+	font-size: 1.9375em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 + p {
+	color: #B19975;
+	font-family: times;
+	font-size: 0.9375em;
+	font-style: italic;
+}
+
+h2 {
+	color: #B3B3B3;
+	font-family: 'RokkittRegular';
+	font-size: 1.75em;
+	font-weight: normal;
+	margin: 15px 0;
+	text-transform: uppercase;
+
+	-webkit-font-smoothing: antialiased;
+}
+
+p {
+	color: #808080;
+	font-family: arial;
+	font-size: 0.875em;
+	margin: 10px 0;
+	padding: 0;
+	line-height: 18px;
+}
+
+.right_hand_side {
+	padding-right: 2em;
+}
+
+.right_hand_side > p:first-of-type  {
+	color: #B19975;
+	font-family: times;
+	font-size: 0.9375em;
+	font-style: italic;
+}
+.find_out_more {
+	color: #B19975;
+	font-family: times;
+	font-size: 1em;
+	font-style: italic;
+	line-height: 20px;
+	margin: 0 auto;
+}
+
+.find_out_more a {
+	color: #B19975;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.margin-top {
+	margin-top: 2em;
+}
+
+

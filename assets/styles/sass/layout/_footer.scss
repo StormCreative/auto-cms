@@ -1,0 +1,52 @@
+@import "mixin/retina";
+
+.footer {
+	background: #1A1A1A;
+	clear: both;
+	font-family: Arial;
+	font-size: 10px;
+	letter-spacing: -0.31em;
+	list-style: none;
+	margin: 0;
+	padding: 32px 0 54px;
+	position: relative;
+	text-align: center;
+
+	-webkit-font-smoothing: antialiased;
+
+	li {
+		color: #FFF;
+		display: inline-block;
+		letter-spacing: normal;
+		margin: 0 2px;
+
+		a {
+			color: #FFF;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+
+		.active {
+			text-decoration: underline;
+		}
+	}
+
+	&:before {
+		background: url("../images/logo-footer.png") 0 0 no-repeat;
+		content: '';
+		height: 82px;
+		left: 30px;
+		position: absolute;
+		top: -36px;
+		width: 82px;
+
+		@include retina {
+			background: url("../images/retina/logo-footer_2x.png") 0 0 no-repeat;
+			background-size: 100%;
+		}
+	}
+}

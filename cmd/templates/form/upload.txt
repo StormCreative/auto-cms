@@ -1,0 +1,9 @@
+<div class="js-uploads-container" data-type="document"></div>
+<input type="hidden" name="{{CONTROLLER}}[uploads_id]" value="<?php echo $uploads_id; ?>" />
+<?php if ( !!$uploads_id && !!$upload_name ) : ?>
+	<div class="js-existing-upload-container">
+		<input type="text" name="uploads[title]" value="<?php echo $upload_title; ?>" /> - <button type="button" class="js-delete-upload" data-id="<?php echo $uploads_id; ?>" data-upload-name="<?php echo $upload_name; ?>">X Delete</button>
+		<input type="hidden" name="uploads[id]" value="<?php echo $uploads_id; ?>" />
+		<input type="hidden" name="uploads[name]" value="<?php echo $upload_name; ?>" />
+	</div>
+<?php endif; ?>

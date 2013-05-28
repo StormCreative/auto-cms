@@ -1,0 +1,8 @@
+<?php
+
+class uploads_model extends active_record
+{
+	
+}
+
+?>

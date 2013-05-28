@@ -1,0 +1,64 @@
+.overlay {
+	background-color: rgba(0, 0, 0, 0.2);
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	.modal {
+		background: none repeat scroll 0 0 #FFFFFF;
+		border: 1px solid #AAA;
+    	height: 200px;
+    	left: 50%;
+    	margin-left: -125px;
+    	margin-top: -100px;
+    	padding: 0;
+    	position: fixed;
+    	top: 50%;
+    	width: 250px;
+    	z-index: 2;
+
+    	border-radius: 6px;
+    	-moz-border-radius: 6px;
+    	-webkit-border-radius: 6px;
+
+    	box-shadow: 0 0 50px #000;
+    	-moz-box-shadow: 0 0 50px #000;
+    	-webkit-box-shadow: 0 0 50px #000;
+
+    	h4 {
+    		background: $brand-color; /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhYWFhYWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top,  $brand-color-light 0%, $brand-color 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$brand-color-light), color-stop(100%,$brand-color)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  $brand-color-light 0%,$brand-color 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  $brand-color-light 0%,$brand-color 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  $brand-color-light 0%,$brand-color 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  $brand-color-light 0%,$brand-color 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-color-light', endColorstr='$brand-color',GradientType=0 ); /* IE6-8 */
+    		margin: 0;
+    		padding: 10px;
+
+    		border-radius: 6px 6px 0 0;
+    		-moz-border-radius: 6px 6px 0 0;
+    		-webkit-border-radius: 6px 6px 0 0;
+    	}
+
+    	p {
+    		padding: 0 10px;
+    	}
+
+    	.deletion_buttons {
+    		text-align: center;
+
+    		input {
+	    		cursor: pointer;
+	    		margin: 0 5px;
+	    		width: 100px;
+	    	}
+    	}
+	}
+}

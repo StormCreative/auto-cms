@@ -1,0 +1,9 @@
+<?php
+
+class image_model extends active_record
+{
+	
+}
+
+
+?>

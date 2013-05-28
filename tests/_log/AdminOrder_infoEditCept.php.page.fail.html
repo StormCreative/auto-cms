@@ -1,0 +1,82 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" dir="ltr" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" dir="ltr" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--> <html dir="ltr" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="author" content="Storm Creative" />
+
+        <title>[SITE TITLE] - </title>
+
+        <script src="/drapewell/assets/scripts/utils/modernizr.min.js"></script>
+                    <link rel="stylesheet" href="/drapewell/_admin/assets/styles/edit.css" />
+                    <link rel="stylesheet" href="/drapewell/_admin/assets/styles/button.css" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+                            <header class="settings">
+    <ul class="settings__holder">
+        <li class="settings__holder--img"><img src="/drapewell/_admin/assets/images/logo.png" alt="Company Name" /></li>
+        <li class="settings__holder--button"><i class="js-settings-button icon-cog"></i></li>
+        <div class="js-settings-menu">
+            <ul>
+                <li><a href="/"><i class="icon-external-link"></i>Visit site</a></li>
+                <li><a href="/drapewell/admin/account"><i class="icon-cogs"></i>Settings</a></li>
+                <li><a href="/drapewell/admin/account/logout"><i class="icon-signout"></i>Logout</a></li>
+            </ul>
+        </div>
+    </ul>
+</header>
+            
+                            <aside class="sub__content">
+    <nav>
+      <ul>
+          <li>MENU</li>
+          <li><a href="/drapewell/admin/homepage/edit/1">Home</a></li>
+          <li><a href="/drapewell/admin/products/listing/wallpaper">Wallpaper</a></li>
+          <li><a href="/drapewell/admin/products/listing/fabric">Fabric</a></li>
+          <li><a href="/drapewell/admin/generic_pages/edit/21">About</a></li>
+          <li><a href="/drapewell/admin/corporate_contracts/edit/1">Corporate Contracts</a></li>
+          <li><a href="/drapewell/admin/listing/table/listing_page">Services</a></li>
+          <li><a href="/drapewell/admin/listing/table/quotes?columns=name,position">Quotes</a></li>
+          <li><a href="/drapewell/admin/services">Generic Services</a></li>
+          <li><a href="/drapewell/admin/listing/table/testimonials?columns=title">Testimonials</a></li>
+          <li><a href="/drapewell/admin/order_info/edit/1">Order Information</a></li>
+          <li><a href="/drapewell/admin/terms_and_conditions">Terms and conditions</a></li>
+          <li><a href="/drapewell/admin/contact_info/edit/1">Contact</a></li>
+          <li><a href="/drapewell/admin/orders/listing/pending">Pending Orders</a></li>
+          <li><a href="/drapewell/admin/orders/listing/processed">Processed Orders</a></li>
+      </ul>
+    </nav>
+</aside>
+            <section class="main__content">
+    <article class="main__editor">
+        <h1 class="main__editor--heading"><a href="/drapewell/admin/listing/table/order_info" class="back-button icon-arrow-left"></a>Order Information - Edit</h1>
+        <form class="main__editor--form" method="post" enctype="multipart/form-data">
+            <p class="success_message">Congratulations! The item has been saved.</p>            <input type="hidden" name="order_info[id]" value="37" />
+            <p>Returns:</p><textarea class="js-wysiwyg" name="order_info[returns]"></textarea>
+            <p>Delivery:</p><textarea class="js-wysiwyg" name="order_info[delivery]"></textarea>
+            <p><input type="submit" name="submit" value="Save" class="js-save" /><span class="js-ajax-loader"></span></p>
+        </form>
+    </article>
+</section>
+<script>
+    var image_count = 0;
+    var document_count = 0</script>
+    </div>
+    <div class="overlay">
+    <div class="modal">
+        <h4>Confirm deletion</h4>
+        <p>Are you sure that you want to delete the selected option(s)?</p>
+        <p class="deletion_buttons">
+            <input class="js-close cancel-button" type="button" value="Cancel" />
+            <input class="confirm-button js-confirm-delete" type="submit" value="Confirm" />
+        </p>
+    </div>
+</div>
+    <script>var site_path = "/drapewell/_admin/"; </script>
+            <script data-main="/drapewell/_admin/assets/scripts/app/main" src="/drapewell/assets/scripts/require.min.js"></script>
+    </body>
+</html>

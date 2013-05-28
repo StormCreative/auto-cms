@@ -1,0 +1,20 @@
+<?php
+
+class {{MODEL}}_model extends activerecord
+{
+	public function __Construct ()
+	{
+		parent::__Construct ();
+
+		{{HAS_IMAGE}}
+		{{HAS_UPLOAD}}
+
+		//Set the validation from the fields, at the moment they will all be not_empty so we have something to test
+		$this->has_one = "";
+        $this->has_many = array();
+
+		{{VALIDATION}}
+	}
+}
+
+?>

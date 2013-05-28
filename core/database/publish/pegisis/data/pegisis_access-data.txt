@@ -1,0 +1,1 @@
+INSERT INTO `pegisis_access` ( id, email, password, create_date) VALUES ('1', 'davidjones@stormcreative.co.uk', '3d1340edce142b408588e024c0fc6d8193aab4e4', '2013-04-09 15:32:01')

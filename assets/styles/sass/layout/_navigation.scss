@@ -1,0 +1,135 @@
+@import "mixin/retina";
+
+.navigation {
+	background: url("../images/bg-nav_tile.png");
+	font-family: Arial;
+	font-size: 11px;
+	list-style: none;
+	margin: 0;
+	padding: 12px 0;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+
+	.navigation__links {
+		display: inline-block;
+		margin: 0 1px 0 5px;
+		vertical-align: middle;
+
+		a {
+			color: #B19975;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover,
+			&:focus {
+				border-bottom: 2px solid #B19975;
+			}
+		}
+
+		.active {
+			border-bottom: 2px solid #B19975;
+		}
+
+		.navigation__links--logo {
+			background: url("../images/logo-nav.png") 0 0 no-repeat;
+			display: block;
+			font-size: 0px;
+			height: 82px;
+			margin: 0 15px;
+			width: 80px;
+
+			@include retina {
+				background: url("../images/retina/logo-nav_2x.png") 0 0 no-repeat;
+				background-size: 100%;
+			}
+
+			&:hover,
+			&:focus {
+				border: none;
+			}
+		}
+	}
+
+	.services {
+		color: #B19975;
+		cursor: pointer;
+		padding-right: 15px;
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		a {
+			&:hover,
+			&:focus {
+				border-bottom: none;
+			}
+		}
+
+		&:hover > ul,
+		&:focus > ul {
+			visibility: visible;
+		}
+
+		&:after {
+			content: 'V';
+			font-size: 8px;
+			position: absolute;
+			right: 6px;
+			top: 2px;
+		}
+
+		ul {
+			background: url("../images/bg-nav-dropdown_tile.png") repeat-x;
+			border-bottom: 2px solid #B19975;
+			left: -12px;
+			list-style: none;
+			margin: 0;
+			padding: 12px 0 0 0;
+			position: absolute;
+			text-align: left;
+			top: 100%;
+			visibility: hidden;
+			width: 208px;
+
+			.ie9 & {
+				background: url("../images/bg-nav-dropdown_tile-webkit.png") repeat-x;
+			}
+
+			li {
+				float: left;
+				padding: 0 0 12px 12px;
+				width: 50%;
+
+				a {
+					text-transform: none;
+
+					&:hover,
+					&:focus {
+						border: none;
+						color: #CFC4B0;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	.active {
+		border-bottom: 2px solid #B19975;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.navigation .services ul  { 
+		background: url("../images/bg-nav-dropdown_tile-webkit.png") repeat-x;
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+	.services ul {
+			margin-top: -1px !important;
+		}
+}

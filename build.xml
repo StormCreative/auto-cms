@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+    <project name="Drapewell" default="initialize">
+        <target name="initialize">
+
+        </target>
+        <target name="upload_files" depends="initialize">
+            <ftp server="78.109.163.36"
+                 userid="stormtest"
+                 password="h=qefR2"
+                 port="21"
+                 remotedir="/httpdocs/drapewell"
+                 passive="yes"
+                 binary="no">
+                <fileset dir=".">
+                    <include name="assets/"   />
+                    <include name="_admin/"   />
+                    <include name="app/"   />
+                    <include name="core/"   />
+                    <include name="index.php" />
+                    <include name=".htaccess"   />
+                </fileset>
+            </ftp>
+        </target>
+    </project>

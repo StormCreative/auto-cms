@@ -1,0 +1,50 @@
+.pagination {
+	border-top: 1px solid #B3B3B3;
+	list-style: none;
+	padding: 12px 0;
+	text-align: right;
+	width: 97%;//46.625em; // 746px
+
+	li {
+		color: #B3B3B3;
+		display: inline-block;
+		float: right;
+		font-family: 'Arial';
+		font-size: 12px;
+
+		&:first-child {
+			float: left;
+		}
+
+		i {
+			color: #B19975;
+			font-family: 'Times';
+			font-size: 15px;
+			margin: 0 4px;
+		}
+
+		a {
+			color: #B3B3B3;
+			margin: 0 1px;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				color: #B19975;
+			}
+		}
+
+		.pagination__arrows {
+			color: #B19975;
+			margin: 0;
+		}
+
+		.js-numeric-buttons {
+			display: inline-block;
+		}
+
+		.current {
+			color: #B19975;
+		}
+	}
+}

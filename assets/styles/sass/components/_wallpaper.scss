@@ -1,0 +1,20 @@
+.wrapper {
+	background: #FFF url(../images/wallpaper_wrapper_bg.png) repeat-y; // This makes a white background that will go all the way across and also makes sure that the image repeats downwards
+	overflow: hidden;
+}
+
+.grid__layout {
+	margin-top: 2em;
+	margin-bottom: 5em;
+}
+
+
+.grid__layout--three-quarters {
+	float: right;
+	padding: 10px 5px;
+	width: 71.38%;
+}
+
+.grid__layout--one-quarter {
+	padding: 10px 5px;
+}
