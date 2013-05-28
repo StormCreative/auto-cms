@@ -1,1 +1,14 @@
-{  }
+{ "contact" : { "type" : "normal",
+				"fields" : { "name" : "text",
+			    	         "email" : "text",
+			    	  	     "phone" : "text",
+			    	   		 "postcode" : "text" } },
+	"about" : { "type" : "normal",
+				"fields" : { "name" : "text",
+			    	         "email" : "text",
+			    	  	     "phone" : "text",
+			    	   		 "postcode" : "text" } },
+  "projects" : { "type" : "listing",
+  				"fields" : { "title" : "text",
+  							 "content" : "textarea",
+  							 "image" : "image" } } }

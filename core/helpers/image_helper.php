@@ -39,6 +39,12 @@ class Image_helper
 	 */
 	static public function save_many ( $images )
 	{
+		Image_helper::multi_image_move();
+
+		if ( !$images ) {
+			$images = $_POST[ 'multi-image' ];
+		}
+
         $ids = array();
 
         foreach ($images as $image) {

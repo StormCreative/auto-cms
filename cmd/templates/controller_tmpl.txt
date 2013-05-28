@@ -3,12 +3,14 @@
 class {{CONTROLLER}} extends application_controller
 {
 	private $_{{CONTROLLER}};
+	private $_admin_helper;
 
 	public function __Construct ()
 	{
 		parent::__Construct ();
 
 		$this->_{{CONTROLLER}} = new {{CONTROLLER}}_model();
+		$this->_admin_helper = new Admin_helper();
 		
 		$this->forms->setActionTable ( '{{CONTROLLER}}' );
 	}
@@ -33,6 +35,7 @@ class {{CONTROLLER}} extends application_controller
 
 		// Sets the form values by the properties set through the Find method in active record
 		$this->mergeTags ( $this->_{{CONTROLLER}}->attributes );
+		$this->addTag ( "gallery_items", $this->_admin_helper->get_images( $this->_{{CONTROLLER}}->attributes[ 'gallery' ] ) );
 		
 		$this->addTag ( 'image', $this->_{{CONTROLLER}}->image );
 		$this->addTag ( 'feedback', $feedback );

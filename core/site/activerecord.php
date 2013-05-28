@@ -1,5 +1,10 @@
 <?php
 
+//Had to put this in for the unit tests because they were failing because they couldnt pick up a helper function
+if(php_sapi_name() == 'cli' || empty($_SERVER['REMOTE_ADDR'])) {
+    include 'core/helpers/helpers.php';
+}
+
 abstract class activerecord
 {
     public $attributes = array();

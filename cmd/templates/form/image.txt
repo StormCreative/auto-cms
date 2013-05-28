@@ -1,8 +1,13 @@
 <div class="js-upload-container" data-type="image"></div>
-<?php if ( !!$image ) : ?>
-	<div class="js-saved-image">
-		<input type="hidden" name="image" class="js-hidden-name" value="<?php echo $image; ?>" />
-		<img src="<?php echo DIRECTORY; ?>_admin/assets/uploads/images/<?php echo $image; ?>" alt="<?php echo $title; ?>" />
-		<button type="button" class="js-delete-image" data-imagename="<?php echo $image; ?>">Delete</button>
-	</div>
+<?php if ( !!$gallery_items ) : ?>
+    <?php foreach ( $gallery_items as $item ) : ?>
+        <div id="<?php echo $item['imgname'] ?>" class="image_<?php echo $item[ 'id' ]; ?>">
+            <span class="images_holder"><img src="<?php echo DIRECTORY; ?>_admin/assets/uploads/images/<?php echo $item[ 'imgname' ]; ?>" /></span>
+            <ol class="hoz btns">
+                <input type="hidden" name="multi-image[<?php echo $item[ 'imgname' ]; ?>][id]" value="<?php echo $item[ 'id' ]; ?>" />
+                <input type="hidden" name="multi-image[<?php echo $item[ 'imgname' ]; ?>][imgname]" value="<?php echo $item[ 'imgname' ]; ?>" />
+                <input type="button" class="del-image js-delete-image delete-btn" data-id="<?php echo $item[ 'id' ]; ?>" data-imagename="<?php echo $item[ 'imgname' ]; ?>"  data-type="<?php echo $item[ 'imgname' ]; ?>" value="Delete" /></li>
+            </ol>
+        </div>
+    <?php endforeach; ?>
 <?php endif; ?>

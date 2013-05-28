@@ -69,3 +69,35 @@ function put ( $path, $contents )
     else
         return FALSE;
 }
+
+/**
+ * Method to take a input type and get the relevant field to use in a query
+ *
+ * @param string $type
+ *
+ * @return string $field
+ *
+ * @access global
+ */
+function type_to_field ( $type = "" )
+{
+    if ( !!$type ) {
+        switch( $type ) {
+            case 'text'     :
+            case 'radio'    :
+            case 'checkbox' :
+            case 'email'    :
+            case 'select'   :
+            case 'upload'   :
+                $field = 'VARCHAR(255)';
+                break;
+            case 'textarea' :
+                $field = 'TEXT';
+                break;
+            default :
+                $field = 'VARCHAR(255)';
+        }
+
+        return $field;
+    }
+}

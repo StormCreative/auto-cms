@@ -45,7 +45,7 @@ define(['jquery'], function($) {
 	//Images
 	var image_list = $('#image-list-js');
 	var image_upload = $('#image_upload');
-	var image_multi = !!window.image_multi ? true : false;
+	var image_multi = !!window.image_multi ? true : true;
 	
 	$(".file-upload-js>div").each(function(e) {
 		
@@ -55,7 +55,7 @@ define(['jquery'], function($) {
 			number_of_images;
 
 		if ( typeof ( window.number_of_images ) == 'undefined' )
-			var no_of_images = 1;
+			var no_of_images = 99;
 
 		if ( typeof ( window.ext ) == 'undefined' )
 			var allowed_extensions = '';
@@ -102,7 +102,7 @@ define(['jquery'], function($) {
 		        'requeueErrors'    : settings.requeueErrors || false,
 		        'successTimeout'   : settings.successTimeout || 30,
 		        'swf'              : window.site_path + 'assets/scripts/utils/uploadify/uploadify.swf',
-		        'uploader'         : '/pegisis/ajax_uploadify',
+		        'uploader'         : '/auto-cms/ajax_uploadify',
 		        'uploadLimit'      : settings.uploadLimit || 999,
 		        'width'            : settings.width || 120,
 		        'z-index'		   : '1',
@@ -158,6 +158,7 @@ define(['jquery'], function($) {
 	 * If the file is a document the document name, a icon for the document type and a delete button is 
 	 */
 	function success ( file, data, response ) {
+
 		var data = $.parseJSON ( data );
 		
 		if ( data.type == 'image' )
