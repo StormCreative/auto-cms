@@ -13,4 +13,10 @@
   							  "content" : "textarea",
   							  "image" : "image",
   							  "type" : "radio:book,film,music",
+  							  "tag" : "checkbox:design,development" } },
+  "stuff" : { "type" : "listing",
+  				 "fields" : { "title" : "text",
+  							  "content" : "textarea",
+  							  "image" : "image",
+  							  "type" : "radio:book,film,music",
   							  "tag" : "checkbox:design,development" } } }
